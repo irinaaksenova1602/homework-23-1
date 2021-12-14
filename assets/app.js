@@ -9,7 +9,7 @@ let isFale = false;
 
 function play(){
         
-        if(i == 0){
+        if(i == 1){
             messagePlace.innerHTML= (`Game over: Secret: ${secret}`);
             isFale = true;
             return;
