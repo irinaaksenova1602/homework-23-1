@@ -3,16 +3,15 @@ let secret = Math.random();
     secret = Math.floor(secret);    
     secret = secret + 1;
 
-
+let i = 10;
+let isFale = false;
 
 
 function play(){
-
-    for( let i = 10; i > 1; i--){
-        numberPlace.innerHTML = (`${i}`);
-
-        if(i < 1){
+        
+        if(i == 0){
             messagePlace.innerHTML= (`Game over: Secret: ${secret}`);
+            isFale = true;
             return;
         } 
         
@@ -30,10 +29,8 @@ function play(){
             }else {
             resultPlace.innerHTML = (`Ваш вариант ${option} больше моего`);
             }
-              
-         
-        
-    }    
+            i--;
+            numberPlace.innerHTML = (`${i}`); 
 }    
     
  console.log(secret);
